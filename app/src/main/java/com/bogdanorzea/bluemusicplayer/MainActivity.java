@@ -1,5 +1,6 @@
 package com.bogdanorzea.bluemusicplayer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            selectDrawerItem(item);
+            selectNavigationItem(item);
             return true;
         }
 
@@ -33,17 +34,25 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        String artistName;
+        Intent intent = getIntent();
+        if (intent != null) {
+            artistName = intent.getStringExtra("ARTIST");
+            navigation.setSelectedItemId(R.id.navigation_now_playing);
+        }
+
         // Select the Explore item
-        navigation.setSelectedItemId(R.id.navigation_explore);
+        navigation.setSelectedItemId(R.id.navigation_library);
+
     }
 
-    public void selectDrawerItem(MenuItem menuItem) {
+    public void selectNavigationItem(MenuItem menuItem) {
         // Create a new fragment and specify the fragment to show based on nav item clicked
         Fragment fragment = null;
         Class fragmentClass;
-        switch(menuItem.getItemId()) {
-            case R.id.navigation_explore:
-                fragmentClass = ExploreFragment.class;
+        switch (menuItem.getItemId()) {
+            case R.id.navigation_library:
+                fragmentClass = LibraryFragment.class;
                 break;
             case R.id.navigation_now_playing:
                 fragmentClass = NowPlayingFragment.class;
@@ -55,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentClass = SettingsFragment.class;
                 break;
             default:
-                fragmentClass = ExploreFragment.class;
+                fragmentClass = LibraryFragment.class;
         }
 
         try {
@@ -70,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Highlight the selected item has been done by NavigationView
         menuItem.setChecked(true);
+
         // Set action bar title
         setTitle(menuItem.getTitle());
     }
-
 }
