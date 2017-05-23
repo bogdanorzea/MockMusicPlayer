@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="48dp"
-        android:src="@drawable/ic_store_closed_icon" />
+        android:src="@drawable/ic_store_closed_icon_200dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
         android:layout_marginTop="16dp"
         android:text="Sorry, we are currently building the store :(."
         android:textAlignment="center"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,5 +28,5 @@
         android:layout_gravity="center"
         android:text="When it will be finished, you will be able to buy music online and listen to it from the app."
         android:textAlignment="center"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 </LinearLayout>

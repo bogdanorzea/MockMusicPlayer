@@ -15,7 +15,7 @@
             android:id="@+id/artist_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:text="Artist" />
 
@@ -23,7 +23,7 @@
             android:id="@+id/song_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
 
             tools:text="Song" />
     </LinearLayout>
@@ -35,11 +35,12 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:elevation="3dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/ic_album_black_200px" />
 
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         tools:progress="50" />
 
     <LinearLayout
@@ -69,14 +70,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
             android:src="@drawable/ic_fast_forward_black_24dp" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
             android:src="@drawable/ic_skip_next_black_24dp" />
     </LinearLayout>
 </LinearLayout>
