@@ -8,17 +8,10 @@
     tools:context="com.bogdanorzea.mockmusicplayer.MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/description_main"
-        android:theme="@style/ExplanationText" />
+        style="@style/ExplanationText"
+        android:text="@string/description_main" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@color/colorPrimaryDark" />
+    <TextView style="@style/ExplanationSeparator" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,38 +21,26 @@
 
         <TextView
             android:id="@+id/library"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/MainActivity_CategoryItem"
             android:drawableLeft="@drawable/ic_library_music_black_48dp"
-            android:text="@string/title_library"
-            android:theme="@style/MainActivity_CategoryItem" />
+            android:text="@string/title_library" />
 
         <TextView
             android:id="@+id/now_playing"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/MainActivity_CategoryItem"
             android:drawableLeft="@drawable/ic_music_note_black_48dp"
-            android:text="@string/title_now_playing"
-            android:theme="@style/MainActivity_CategoryItem" />
+            android:text="@string/title_now_playing" />
 
         <TextView
             android:id="@+id/store"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/MainActivity_CategoryItem"
             android:drawableLeft="@drawable/ic_store_closed_icon_48dp"
-            android:text="@string/title_store"
-            android:theme="@style/MainActivity_CategoryItem" />
+            android:text="@string/title_store" />
 
         <TextView
             android:id="@+id/settings"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/MainActivity_CategoryItem"
             android:drawableLeft="@drawable/ic_settings_input_composite_black_48dp"
-            android:text="@string/title_settings"
-            android:theme="@style/MainActivity_CategoryItem" />
+            android:text="@string/title_settings"/>
     </LinearLayout>
 </LinearLayout>

@@ -5,17 +5,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/description_library"
-        android:theme="@style/ExplanationText" />
+        style="@style/ExplanationText"
+        android:text="@string/description_library" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@color/colorPrimaryDark" />
+    <TextView style="@style/ExplanationSeparator" />
 
     <ListView
         android:id="@+id/list_view"
