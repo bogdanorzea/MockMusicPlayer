@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="(This is the SettingsActivity of the App and displays the available settings for this app: Equalizer, Notifications, Sync Settings across devices, Library location, etc. I need to use SharedPreferences, Equalizer, Storage Access)"
+        android:text="@string/description_settings"
         android:theme="@style/ExplanationText" />
 
     <TextView

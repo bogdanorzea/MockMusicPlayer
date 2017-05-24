@@ -7,4 +7,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">TODO IMPLEMENT SETTINGS</string>
+    <string name="description_settings">In the Settings activity some available configurations for this app are desplayed: Equalizer, Notifications, Sync Settings across devices, Library location etc. I need to use SharedPreferences, Equalizer, Storage Access and possible others API.</string>
+    <string name="description_store">This is the Store of the App from where the user can browse an online store to purchase music. Setting up this activity will require WebView and Storage Access.</string>
+    <string name="description_now_playing">This is the NowP laying section of the App. From this activity the user can control the song playback. In order to fully implement this activity, I can use the MediaPlayer API.</string>
+    <string name="description_main">This is the main activity of the App. From this activity the user can navigate through the app in a consistent way. Other activities are started using explicit intents.</string>
+    <string name="description_library">This is the Library that displays the available list of songs from the internal memory of the device. In order to implement this I need to use the Storage Access Framework.</string>
 </resources>

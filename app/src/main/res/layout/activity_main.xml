@@ -10,8 +10,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is the main activity of the App. From this activity the user can navigate throunght the app in a consistent way. Other activities are started using specific intents."
-        android:theme="@style/ExplanationText"/>
+        android:text="@string/description_main"
+        android:theme="@style/ExplanationText" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"

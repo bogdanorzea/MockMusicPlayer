@@ -45,14 +45,14 @@ public class NowPlayingActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(NowPlayingActivity.this, "play/pause the sound", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NowPlayingActivity.this, "Play/pause the sound", Toast.LENGTH_SHORT).show();
             }
         });
         forwardButton = (ImageButton) findViewById(R.id.forward);
         forwardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(NowPlayingActivity.this, "Forward 5 secounds", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NowPlayingActivity.this, "Forward 5 seconds", Toast.LENGTH_SHORT).show();
             }
         });
         skipButton = (ImageButton) findViewById(R.id.skip);
@@ -65,10 +65,15 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null) {
-            String artist = intent.getStringExtra("ARTIST");
+            String name = intent.getStringExtra("ARTIST&SONG");
             artistName = (TextView) findViewById(R.id.artist_name);
-            if (artist != null) {
-                artistName.setText(artist);
+            songName = (TextView) findViewById(R.id.song_name);
+            if (name != null) {
+                String[] parts = name.split("-");
+                if (parts.length == 2) {
+                    artistName.setText(parts[0].trim());
+                    songName.setText(parts[1].trim());
+                }
             }
         }
     }

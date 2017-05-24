@@ -35,7 +35,7 @@ public class LibraryActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
-                intent.putExtra("ARTIST", artistList.get(position));
+                intent.putExtra("ARTIST&SONG", artistList.get(position));
                 startActivity(intent);
             }
         });
