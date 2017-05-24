@@ -8,55 +8,57 @@
     tools:context="com.bogdanorzea.bluemusicplayer.MainActivity">
 
     <TextView
-        android:id="@+id/library"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:drawableLeft="@drawable/ic_library_music_black_48dp"
-        android:drawablePadding="24dp"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:text="@string/title_library"
-
-        android:textSize="24sp" />
-
+        android:text="This is the main activity of the App. From this activity the user can navigate throunght the app in a consistent way. Other activities are started using specific intents."
+        android:theme="@style/ExplanationText"/>
     <TextView
-        android:id="@+id/now_playing"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:drawableLeft="@drawable/ic_music_note_black_48dp"
-        android:drawablePadding="24dp"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:text="@string/title_now_playing"
-        android:textSize="24sp" />
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimaryDark" />
 
-
-    <TextView
-        android:id="@+id/store"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:drawableLeft="@drawable/ic_store_closed_icon_48dp"
-        android:drawablePadding="24dp"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:text="@string/title_store"
-        android:textSize="24sp" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:drawableLeft="@drawable/ic_settings_input_composite_black_48dp"
-        android:drawablePadding="24dp"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:text="@string/title_settings"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/library"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_library_music_black_48dp"
+            android:text="@string/title_library"
+            android:theme="@style/MainActivity_CategoryItem" />
+
+        <TextView
+            android:id="@+id/now_playing"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_music_note_black_48dp"
+            android:text="@string/title_now_playing"
+            android:theme="@style/MainActivity_CategoryItem" />
+
+        <TextView
+            android:id="@+id/store"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_store_closed_icon_48dp"
+            android:text="@string/title_store"
+            android:theme="@style/MainActivity_CategoryItem" />
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_settings_input_composite_black_48dp"
+            android:text="@string/title_settings"
+            android:theme="@style/MainActivity_CategoryItem" />
+    </LinearLayout>
 </LinearLayout>

@@ -1,12 +1,12 @@
 package com.bogdanorzea.bluemusicplayer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,9 +34,9 @@ public class LibraryActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                // TODO PUT INTENT TO OPEN SONG IN THE NOW PLAYING SECTION
-                Toast.makeText(view.getContext(), artistList.get(position), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
+                intent.putExtra("ARTIST", artistList.get(position));
+                startActivity(intent);
             }
         });
     }
