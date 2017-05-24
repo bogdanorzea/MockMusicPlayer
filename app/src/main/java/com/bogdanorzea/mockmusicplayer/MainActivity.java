@@ -1,4 +1,4 @@
-package com.bogdanorzea.bluemusicplayer;
+package com.bogdanorzea.mockmusicplayer;
 
 import android.content.Intent;
 import android.os.Bundle;
